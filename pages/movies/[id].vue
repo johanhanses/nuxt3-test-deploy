@@ -4,7 +4,7 @@ import { Movie } from '~~/types'
 const route = useRoute()
 
 const { data, error } = await useFetch<Movie>(
-  `http://www.omdbapi.com/?apikey=3484716c&i=${route.params.id}`,
+  `https://www.omdbapi.com/?apikey=3484716c&i=${route.params.id}`,
   {
     pick: ['Plot', 'Title', 'Response', 'Poster'],
     key: `/movies/${route.params.id}`
